@@ -12,6 +12,11 @@
     display: table;
     clear: both;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 580px;
+
+}
 
 /*parte principale*/
 
@@ -36,9 +41,10 @@ aside{
     color: #555;
     line-height: 28px;
     font-size: 12px;
+    overflow-y: auto;
 }
 aside .logo{
-    width: 60%;
+    width: 150px;
 
 }
 aside .home{
@@ -51,9 +57,7 @@ aside .home{
 aside .playlist{
     margin-top: 8px;
 }
-aside ul p{
 
-}
 aside .plus{
     font-size: 24px;
 }
@@ -63,8 +67,12 @@ aside .plus{
 aside .installa{
     
     position: fixed;
-    bottom: 90px;
-    
+    bottom: 90px;  
+}
+aside .line-row{
+    border: 1px solid;
+    width: 200px;
+
 }
 
 
@@ -79,6 +87,8 @@ main{
 }
 .main-content{
     padding-top: 80px;
+    margin: 0 20px;
+    margin-bottom: 20px;
     
 }
 .op{
@@ -88,6 +98,7 @@ main{
     font-size: 12px;
     color: #555;
     margin-bottom: 10px;  
+    flex-wrap: wrap;
 }
 .title-span{
     margin-top: 40px;
@@ -95,10 +106,10 @@ main{
     line-height: 25px;
 }
 
-.section1{
+.box-card{
     display: flex;
     font-size: 12px;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     text-align: center;
 }
@@ -109,7 +120,6 @@ main{
     width: 100%;  
 }
 .section h1{
-    margin-left: 10px;
     font-size: 20px;
     color: white;
 }
@@ -118,7 +128,6 @@ main{
     margin-top: 12px;
 }
 .section span{
-    margin-left: 10px;
     color: #555;
 
 }
@@ -166,33 +175,102 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;  
-    background-color: blue;
+    background-color: #4a4a4a;
+    color: white;
+    
 }
 .player-bar{
     display: flex;
     justify-content: space-between ;
     align-items: center;
-    margin: 20px 15px;    
+    margin: 20px 15px; 
+    gap: 10px;
+
+    
+     
+     
 }
-.player-bar img{
-    width: 50px;
-    height: 50px;
+.section-left{
+    display: flex;
+    gap: 2vw;
+    
+}
+.img-flex{
+    display: flex;
+}
+.section-left img{
+    width: 40px;
+    height: 40px;
 
 }
-.player-bar-text{
-    float: right; 
-    margin-left: 10px;
-    padding: 5px;
+.section-left-text{
+    margin: 7px;
+    font-size: 10px;
 }
-.player-bar-aweson{
-   float: right;
-   padding-left: 60px;  
-   padding-top: 18px;
+.section-left-aweson{
+    flex-wrap: wrap;
+    margin: 10px 0;
+    
+     
 }
 
 
-.line2{
-    width: 100px;
-    float: right;
+
+.section-central .line-time{
+    width: 40vw;
     border: 3px solid #555;
+    border-radius: 4px;
+    margin: 7px 0;  
+    
 }
+.section-central .play{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    text-align: center; 
+}
+.section-central .time{
+    display: flex;
+    gap: 2%;   
+}
+
+
+.section-right{
+    display: flex;
+    gap: 8px;
+}
+.section-right .line2{
+    width: 8vw;
+    margin: 7px 0;
+    border: 3px solid #555;
+    border-radius: 4px;
+}
+
+/*media querety*/
+@media screen and (max-width:580px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    aside{
+        width: 40px;
+        font-size: 0;
+    }
+    aside .logo{
+        width: 20px;
+        background: url(../img/logo-small.svg);
+        background-repeat: no-repeat;
+        
+    }
+ 
+    main{
+        width: calc(100% - 40px);
+    }
+   
+
+   
+    
+
+}
+
