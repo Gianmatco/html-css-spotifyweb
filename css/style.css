@@ -324,16 +324,17 @@ footer{
 }
 
 /*media querety*/
-@media screen and (max-width:415px) {
+@media screen and (max-width:410px) {
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     aside{
-        width: 50px;
+        width: 60px;
         font-size: 0;
         line-height: 30px;
+        
         
     }
     aside .logo{
@@ -341,7 +342,9 @@ footer{
         height: 20px;
         background: url(../img/logo-small.svg);
         background-repeat: no-repeat; 
-        margin-bottom: 15px; 
+        
+        margin: 0px auto; 
+       
     }
     aside .plus{
         font-size: 0;  
