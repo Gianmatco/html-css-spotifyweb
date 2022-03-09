@@ -44,7 +44,7 @@ aside{
     color: #555;
     line-height: 28px;
     font-size: 12px;
-    overflow-y: auto;
+    
 }
 aside .logo{
     width: 150px;
@@ -53,19 +53,34 @@ aside .logo{
 aside .home{
     margin-top: 6px;
     color: #555;
+    
 }
 .home .symbol{
     font-size: 18px;
+    padding-left: 4px;
+    border: 2px solid #111;
+}
+.home .symbol:hover{
+    border-left: 2px solid yellowgreen;
+    color: white;
 }
 aside .playlist{
     margin-top: 8px;
+    overflow-y: auto;   
 }
 
 aside .plus{
     font-size: 24px;
 }
+aside .plus:hover{
+    color: white;
+}
+.playlis ul{
+
+}
 .playlist ul li{
     list-style-type: none;
+    
 }
 aside .installa{
     
@@ -75,6 +90,10 @@ aside .installa{
 aside .line-row{
     border: 1px solid;
     width: 200px;
+
+}
+aside .p1:hover{
+    color: white;
 
 }
 
@@ -88,11 +107,17 @@ main{
     
 
 }
+
+
 .main-content{
     padding-top: 80px;
     margin: 0 20px;
     margin-bottom: 20px;
     
+}
+.home p:hover {
+    color: white;
+ 
 }
 .op{
     display: flex;
@@ -103,6 +128,24 @@ main{
     margin-bottom: 10px;  
     flex-wrap: wrap;
 }
+.line-green{
+    
+    width: 30px;
+    margin: 0 auto;
+    border:1px solid rgba(21,33,48,1);
+}
+.line-green:hover{
+    border:1px solid yellowgreen;
+   
+    
+}
+.op-content:hover{
+    color: white;
+}
+.playlist ul li:hover{
+    color: white;
+}
+
 .title-span{
     margin-top: 40px;
     margin-bottom: 15px;
@@ -115,13 +158,35 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: center;
+    position: relative;
+   
 }
 .section .card{
     width: 150px;
+    position: relative;
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    text-align: center;
+    line-height: 150px;
+    font-size: 40px;
+    color:aliceblue;
 }
 .section img{
     width: 100%;  
 }
+.card-overlay:hover .overlay{
+    display: block;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    color:aliceblue;
+    background-color: rgba(0,0,0,0.4);
+}
+
 .section h1{
     font-size: 20px;
     color: white;
@@ -146,13 +211,13 @@ main{
 nav.top{
     width: 100%;
     height: 60px;
-    position: fixed;
-    
+    position: fixed; 
     z-index: 1000;
     background-color: rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
 }
+
 .btn-border{
     width: 200px;
     padding: 3px 0;
@@ -168,6 +233,9 @@ nav.top{
     color: white;
     font-size: 12px;
     font-weight: 600;
+}
+.btn-border:hover{
+    transform: scale(1.1);
 }
 
 /*footer*/
@@ -213,8 +281,9 @@ footer{
 .section-left-aweson{
     flex-wrap: wrap;
     margin: 10px 0;
-    
-     
+}
+.section-right i:hover, .play i:hover, .section-left-aweson i:hover{
+    transform: scale(1.4);
 }
 
 
@@ -246,6 +315,11 @@ footer{
     width: 8vw;
     margin: 7px 0;
     border: 3px solid #555;
+    border-radius: 4px;
+}
+.section-right .line2:hover, .time .line-time:hover{
+    
+    border: 3px solid yellowgreen;
     border-radius: 4px;
 }
 
